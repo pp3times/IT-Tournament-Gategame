@@ -4,16 +4,20 @@
   --back: url(https://cdn2.bulbagarden.net/upload/1/17/Cardback.jpg);
   --charizard1: #fac;
   --charizard2: #ddccaa;
-  --charizardfront: url(https://assets.codepen.io/13471/charizard-gx.webp);
+  /* --charizardfront: url(https://assets.codepen.io/13471/charizard-gx.webp); */
+  --charizardfront: url(https://media.discordapp.net/attachments/804374108946300968/872974126799814666/unknown.png?width=836&height=1138);
   --pika1: #54a29e;
   --pika2: #a79d66;
-  --pikafront: url(https://assets.codepen.io/13471/pikachu-gx.webp);
+  --pikafront: url(https://media.discordapp.net/attachments/804374108946300968/872972497203634226/unknown.png?width=818&height=1137);
+  /* --pikafront: url(https://assets.codepen.io/13471/pikachu-gx.webp); */
   --eevee1: #efb2fb;
   --eevee2: #acc6f8;
-  --eeveefront: url(https://assets.codepen.io/13471/eevee-gx.webp);
+  --eeveefront: url(https://media.discordapp.net/attachments/804374108946300968/872973205818736680/unknown.png?width=818&height=1138);
+  /* --eeveefront: url(https://assets.codepen.io/13471/eevee-gx.webp); */
   --mewtwo1: #efb2fb;
   --mewtwo2: #acc6f8;
-  --mewtwofront: url(https://assets.codepen.io/13471/mewtwo-gx.webp);
+  --mewtwofront: url(https://media.discordapp.net/attachments/804374108946300968/872972459018711040/unknown.png?width=820&height=1139);
+  /* --mewtwofront: url(https://assets.codepen.io/13471/mewtwo-gx.webp); */
 }
 
 .card {
