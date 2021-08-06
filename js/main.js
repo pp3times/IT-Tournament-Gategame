@@ -1689,6 +1689,10 @@ function getGate() {
                 $(".charizard").hide();
               }, 2000);
             }
+            setInterval(() => {
+              $("#gateName").text("ยินดีต้อนรับ "+objStudents[i].fullname+" เข้าสู่ Gate "+objStudents[i].gate);
+              
+            }, 2200);
 			return
 		}
 	}
