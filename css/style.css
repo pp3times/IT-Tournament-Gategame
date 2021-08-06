@@ -26,7 +26,6 @@
   position: relative;
   overflow: hidden;
   margin: 20px;
-  overflow: hidden;
   z-index: 10;
   touch-action: none;
   border-radius: 5%/3.5%;
@@ -39,12 +38,6 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   transform-origin: center;
-}
-@media screen and (min-width: 600px) {
-  .card {
-    width: clamp(12.9vw, 61vh, 18vw);
-    height: clamp(18vw, 85vh, 25.2vw);
-  }
 }
 
 .card:hover {
@@ -366,7 +359,23 @@
   vertical-align: middle;
   font-size: 6vh;
 }
-
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.justify-center{
+  justify-content: center;
+}
+.items-center{
+  align-items: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 html, body {
   height: 100%;
   background-color: #333844;
@@ -412,12 +421,24 @@ p {
   flex-direction: row;
   justify-content: center;
 }
-
 @media screen and (min-width: 600px) {
-  .cards {
+  .card {
+    width: clamp(12.9vw, 61vh, 18vw);
+    height: clamp(18vw, 85vh, 25.2vw);
+  }
+  .cards{
     flex-direction: row;
   }
 }
+/* @media scrren and (max-width:600px){
+  .card{
+    width: 50vw;
+    height: 50vh;
+  }
+  .cards{
+    transform: scale(.5);
+  }
+} */
 .cards .card:nth-child(2), .cards .card:nth-child(2):before, .cards .card:nth-child(2):after {
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
@@ -502,15 +523,15 @@ input:focus:-ms-input-placeholder {
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-
 input {
-  position: absolute;
-  box-sizing: border-box;
-  bottom: 4em;
-  left: 50%;
   width: 11em;
-  margin-left: -5.5em;
+  box-sizing: border-box;
+}
+.btn-click-gate{
+  margin-top: 1rem;
+  border-radius: .5rem;
+  padding: .5rem 1rem;
 }
