@@ -15,9 +15,13 @@
 <body style="background-color: #101827;
 ">
 	<div class="bg-white">
-		<div class="center-text" style="width: 100%; height: 100%; opacity: 0; display: flex; justify-content: center; align-items: center;">คุณได้อยู่เกท AND รึป่าววว ??<br>
-		หรือจะได้เกท OR กันแน่น้าา<br>
-		หรือจะไม่ได้สักเกทเลยกันแน่น้าา</div>
+		<div class="center-text"
+			style="width: 100%; height: 100%; opacity: 0; display: flex; justify-content: center; align-items: center;">
+			คุณได้อยู่เกท AND รึป่าววว ??<br>
+			หรือจะได้เกท OR กันแน่น้าา<br>
+			หรือจะไม่ได้สักเกทเลยกันแน่น้าา
+		<br><br>
+	รอเวลาหน่อยนะจ้ะะ</div>
 		<div class="bottom-text-time" style="position: absolute; bottom: 0; left: 50%;"></div>
 	</div>
 	<main id=app>
@@ -91,8 +95,8 @@
 			var c3 = $(".charizard").offset();
 			var c4 = $(".mewtwo").offset();
 			$('form').hide()
-			$(".cards").css({'display':'block','posiotion':'relative'});
-			$('.card').css('position','absolute');
+			$(".cards").css({ 'display': 'block', 'posiotion': 'relative' });
+			$('.card').css('position', 'absolute');
 			$(".pika").css('left', c1.left);
 			$(".eevee").css('left', c2.left);
 			$(".charizard").css('left', c3.left);
@@ -121,15 +125,39 @@
 			}, 6000)
 			$('.bg-white').animate({
 				opacity: 1
-			}, 10000)
-			$('.bg-white').animate({
-				opacity: 0
-			}, 1000)
-			for(let i=120; i>0; i--){
-				setInterval(() => {
-					document.querySelector(".bottom-text-time").innerHTML = i;
-				}, 1000);
-			}
+			}, 8500)
+			var countDownDate = new Date().getTime()+60000;
+
+			// Update the count down every 1 second
+			var x = setInterval(function () {
+
+				// Get today's date and time
+				var now = new Date().getTime();
+
+				// Find the distance between now and the count down date
+				var distance = countDownDate - now;
+
+				// Time calculations for days, hours, minutes and seconds
+				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+				// Output the result in an element with id="demo"
+				document.querySelector(".bottom-text-time").innerHTML = minutes + ":" + seconds + "";
+				// If the count down is over, write some text 
+				if (distance < 0) {
+					clearInterval(x);
+					$('.bg-white').animate({
+						opacity: 0
+					}, 1000)
+				}
+			}, 1000);
+			// for (let i = 120; i > 0; i--) {
+			// 	setInterval(() => {
+			// 		document.querySelector(".bottom-text-time").innerHTML = i;
+			// 	}, 1000);
+			// }
 		})
 	</script>
 	</b getshowody>
