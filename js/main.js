@@ -1658,27 +1658,36 @@ function getGate() {
 		// check is user input matches studentId and password of a current index of the objStudents array
 		if(studentId == objStudents[i].studentId) {
 			console.log("Gate of " + studentId + " is " + objStudents[i].gate)
+
 			// stop the function if this is found to be true
             // alert(objStudents[i].gate)
             if (objStudents[i].gate == "AND"){
               setTimeout(() => {
-                $(".pika").removeClass("hidden-gate");
-              }, 3100);
+                $(".eevee").hide();
+                $(".charizard").hide();
+                $(".mewtwo").hide();
+              }, 2000);
             }
             if (objStudents[i].gate == "OR"){
               setTimeout(() => {
-                $(".eevee").removeClass("hidden-gate");
-              }, 3100);
+                $(".pika").hide();
+                $(".charizard").hide();
+                $(".mewtwo").hide();
+              }, 2000);
             }
             if (objStudents[i].gate == "NOR"){
               setTimeout(() => {
-                $(".charizard").removeClass("hidden-gate");
-              }, 3100);
+                $(".pika").hide();
+                $(".eevee").hide();
+                $(".mewtwo").hide();
+              }, 2000);
             }
             if (objStudents[i].gate == "NOT"){
               setTimeout(() => {
-                $(".mewtwo").removeClass("hidden-gate");
-              }, 3100);
+                $(".pika").hide();
+                $(".eevee").hide();
+                $(".charizard").hide();
+              }, 2000);
             }
 			return
 		}

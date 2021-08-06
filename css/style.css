@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
   --color1: rgb(0, 231, 255);
   --color2: rgb(255, 0, 231);
@@ -30,7 +30,9 @@
   z-index: 10;
   touch-action: none;
   border-radius: 5%/3.5%;
-  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2), -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent, 0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: -5px -5px 5px -5px var(--color1), 5px 5px 5px -5px var(--color2),
+    -7px -7px 10px -5px transparent, 7px 7px 10px -5px transparent,
+    0 0 5px 0px rgba(255, 255, 255, 0), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
   transition: transform 0.5s ease, box-shadow 0.2s ease;
   will-change: transform, filter;
   background-color: #040712;
@@ -42,7 +44,10 @@
 }
 
 .card:hover {
-  box-shadow: -20px -20px 30px -25px var(--color1), 20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1), 7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3), 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: -20px -20px 30px -25px var(--color1),
+    20px 20px 30px -25px var(--color2), -7px -7px 10px -5px var(--color1),
+    7px 7px 10px -5px var(--color2), 0 0 13px 4px rgba(255, 255, 255, 0.3),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
 
 .card.charizard {
@@ -89,7 +94,15 @@
 .card:before {
   background-position: 50% 50%;
   background-size: 300% 300%;
-  background-image: linear-gradient(115deg, transparent 0%, var(--color1) 30%, transparent 47.5%, transparent 52.5%, var(--color2) 70%, transparent 100%);
+  background-image: linear-gradient(
+    115deg,
+    transparent 0%,
+    var(--color1) 30%,
+    transparent 47.5%,
+    transparent 52.5%,
+    var(--color2) 70%,
+    transparent 100%
+  );
   opacity: 0.5;
   filter: brightness(0.5) contrast(1);
   z-index: 1;
@@ -97,7 +110,17 @@
 
 .card:after {
   opacity: 1;
-  background-image: url("https://assets.codepen.io/13471/sparkles.gif"), url(https://assets.codepen.io/13471/holo.png), linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+  background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
+    url(https://assets.codepen.io/13471/holo.png),
+    linear-gradient(
+      125deg,
+      #ff008450 15%,
+      #fca40040 30%,
+      #ffff0030 40%,
+      #00ff8a20 60%,
+      #00cfff40 70%,
+      #cc4cfa50 85%
+    );
   background-position: 50% 50%;
   background-size: 160%;
   background-blend-mode: overlay;
@@ -117,15 +140,21 @@
 .card.active,
 .card:hover {
   -webkit-animation: none;
-          animation: none;
+  animation: none;
   transition: box-shadow 0.1s ease-out;
 }
 
 .card.active:before,
 .card:hover:before {
   -webkit-animation: none;
-          animation: none;
-  background-image: linear-gradient(115deg, transparent 25%, var(--color1) 48%, var(--color2) 52%, transparent 75%);
+  animation: none;
+  background-image: linear-gradient(
+    115deg,
+    transparent 25%,
+    var(--color1) 48%,
+    var(--color2) 52%,
+    transparent 75%
+  );
   background-position: 50% 50%;
   background-size: 250% 250%;
   opacity: 0.88;
@@ -138,43 +167,47 @@
 .card.active:after,
 .card:hover:after {
   -webkit-animation: none;
-          animation: none;
+  animation: none;
   transition: none;
 }
 
 .card.animated {
   transition: none;
   -webkit-animation: holoCard 12s ease 0s 1;
-          animation: holoCard 12s ease 0s 1;
+  animation: holoCard 12s ease 0s 1;
 }
 .card.animated:before {
   transition: none;
   -webkit-animation: holoGradient 12s ease 0s 1;
-          animation: holoGradient 12s ease 0s 1;
+  animation: holoGradient 12s ease 0s 1;
 }
 .card.animated:after {
   transition: none;
   -webkit-animation: holoSparkle 12s ease 0s 1;
-          animation: holoSparkle 12s ease 0s 1;
+  animation: holoSparkle 12s ease 0s 1;
 }
 
 @-webkit-keyframes holoSparkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.75;
     background-position: 50% 50%;
     filter: brightness(1.2) contrast(1.25);
   }
-  5%, 8% {
+  5%,
+  8% {
     opacity: 1;
     background-position: 40% 40%;
     filter: brightness(0.8) contrast(1.2);
   }
-  13%, 16% {
+  13%,
+  16% {
     opacity: 0.5;
     background-position: 50% 50%;
     filter: brightness(1.2) contrast(0.8);
   }
-  35%, 38% {
+  35%,
+  38% {
     opacity: 1;
     background-position: 60% 60%;
     filter: brightness(1) contrast(1);
@@ -187,22 +220,26 @@
 }
 
 @keyframes holoSparkle {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.75;
     background-position: 50% 50%;
     filter: brightness(1.2) contrast(1.25);
   }
-  5%, 8% {
+  5%,
+  8% {
     opacity: 1;
     background-position: 40% 40%;
     filter: brightness(0.8) contrast(1.2);
   }
-  13%, 16% {
+  13%,
+  16% {
     opacity: 0.5;
     background-position: 50% 50%;
     filter: brightness(1.2) contrast(0.8);
   }
-  35%, 38% {
+  35%,
+  38% {
     opacity: 1;
     background-position: 60% 60%;
     filter: brightness(1) contrast(1);
@@ -214,21 +251,25 @@
   }
 }
 @-webkit-keyframes holoGradient {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     background-position: 50% 50%;
     filter: brightness(0.5) contrast(1);
   }
-  5%, 9% {
+  5%,
+  9% {
     background-position: 100% 100%;
     opacity: 1;
     filter: brightness(0.75) contrast(1.25);
   }
-  13%, 17% {
+  13%,
+  17% {
     background-position: 0% 0%;
     opacity: 0.88;
   }
-  35%, 39% {
+  35%,
+  39% {
     background-position: 100% 100%;
     opacity: 1;
     filter: brightness(0.5) contrast(1);
@@ -240,21 +281,25 @@
   }
 }
 @keyframes holoGradient {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.5;
     background-position: 50% 50%;
     filter: brightness(0.5) contrast(1);
   }
-  5%, 9% {
+  5%,
+  9% {
     background-position: 100% 100%;
     opacity: 1;
     filter: brightness(0.75) contrast(1.25);
   }
-  13%, 17% {
+  13%,
+  17% {
     background-position: 0% 0%;
     opacity: 0.88;
   }
-  35%, 39% {
+  35%,
+  39% {
     background-position: 100% 100%;
     opacity: 1;
     filter: brightness(0.5) contrast(1);
@@ -266,16 +311,20 @@
   }
 }
 @-webkit-keyframes holoCard {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
   }
-  5%, 8% {
+  5%,
+  8% {
     transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
   }
-  13%, 16% {
+  13%,
+  16% {
     transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
   }
-  35%, 38% {
+  35%,
+  38% {
     transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
   }
   55% {
@@ -283,16 +332,20 @@
   }
 }
 @keyframes holoCard {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotateZ(0deg) rotateX(0deg) rotateY(0deg);
   }
-  5%, 8% {
+  5%,
+  8% {
     transform: rotateZ(0deg) rotateX(6deg) rotateY(-20deg);
   }
-  13%, 16% {
+  13%,
+  16% {
     transform: rotateZ(0deg) rotateX(-9deg) rotateY(32deg);
   }
-  35%, 38% {
+  35%,
+  38% {
     transform: rotateZ(3deg) rotateX(12deg) rotateY(20deg);
   }
   55% {
@@ -300,12 +353,22 @@
   }
 }
 .card.eevee:hover {
-  box-shadow: 0 0 30px -5px white, 0 0 10px -2px white, 0 55px 35px -20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px -5px white, 0 0 10px -2px white,
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);
 }
 
 .card.eevee:hover:before,
 .card.eevee.active:before {
-  background-image: linear-gradient(115deg, transparent 20%, var(--color1) 36%, var(--color2) 43%, var(--color3) 50%, var(--color4) 57%, var(--color5) 64%, transparent 80%);
+  background-image: linear-gradient(
+    115deg,
+    transparent 20%,
+    var(--color1) 36%,
+    var(--color2) 43%,
+    var(--color3) 50%,
+    var(--color4) 57%,
+    var(--color5) 64%,
+    transparent 80%
+  );
 }
 
 .demo .card {
@@ -323,21 +386,24 @@
 .demo .card:nth-of-type(3) {
   width: 20vh;
   height: 27.5vh;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4), 0 25px 15px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 25px 15px -10px rgba(0, 0, 0, 0.5);
   -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
-.demo .card:nth-of-type(1):before, .demo .card:nth-of-type(1):after,
+.demo .card:nth-of-type(1):before,
+.demo .card:nth-of-type(1):after,
 .demo .card:nth-of-type(2):before,
 .demo .card:nth-of-type(2):after,
 .demo .card:nth-of-type(3):before,
 .demo .card:nth-of-type(3):after {
   -webkit-animation: none;
-          animation: none;
+  animation: none;
 }
 
-.demo .card:nth-of-type(1):before, .demo .card:nth-of-type(1):after {
+.demo .card:nth-of-type(1):before,
+.demo .card:nth-of-type(1):after {
   display: none;
 }
 
@@ -360,31 +426,38 @@
   vertical-align: middle;
   font-size: 6vh;
 }
-.flex{
+.flex {
   display: flex;
 }
-.flex-col{
+.flex-col {
   flex-direction: column;
 }
-.justify-center{
+.justify-center {
   justify-content: center;
 }
-.items-center{
+.items-center {
   align-items: center;
 }
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Kanit', sans-serif;
+  font-family: "Kanit", sans-serif;
 }
-html, body {
-  height: 100%;
-  background-color: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(238,238,238,1) 35%, rgba(219,219,219,1) 100%);
+html,
+body {
+  background-color: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(238, 238, 238, 1) 35%,
+    rgba(219, 219, 219, 1) 100%
+  );
   /* background-color: #333844; */
   padding: 0;
   z-index: 1;
   transform: translate3d(0, 0, 0.1px);
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -426,7 +499,7 @@ p {
     width: clamp(12.9vw, 61vh, 18vw);
     height: clamp(18vw, 85vh, 25.2vw);
   }
-  .cards{
+  .cards {
     flex-direction: row;
   }
 }
@@ -439,17 +512,23 @@ p {
     transform: scale(.5);
   }
 } */
-.cards .card:nth-child(2), .cards .card:nth-child(2):before, .cards .card:nth-child(2):after {
+.cards .card:nth-child(2),
+.cards .card:nth-child(2):before,
+.cards .card:nth-child(2):after {
   -webkit-animation-delay: 0.25s;
-          animation-delay: 0.25s;
+  animation-delay: 0.25s;
 }
-.cards .card:nth-child(3), .cards .card:nth-child(3):before, .cards .card:nth-child(3):after {
+.cards .card:nth-child(3),
+.cards .card:nth-child(3):before,
+.cards .card:nth-child(3):after {
   -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-.cards .card:nth-child(4), .cards .card:nth-child(4):before, .cards .card:nth-child(4):after {
+.cards .card:nth-child(4),
+.cards .card:nth-child(4):before,
+.cards .card:nth-child(4):after {
   -webkit-animation-delay: 0.75s;
-          animation-delay: 0.75s;
+  animation-delay: 0.75s;
 }
 span,
 input {
@@ -474,7 +553,7 @@ input.keyup {
   color: rgb(71, 71, 71);
   border-color: rgb(71, 71, 71);
   text-shadow: 0 0 0.125em rgb(102, 102, 102);
-  box-shadow: 0 0 0.25em rgb(99, 99, 99), inset 0rgb(88, 88, 88)25em white;
+  box-shadow: 0 0 0.25em rgb(99, 99, 99), inset 0rgb (88, 88, 88) 25em white;
 }
 
 canvas {
@@ -523,33 +602,30 @@ input:focus:-ms-input-placeholder {
   opacity: 0.5;
 }
 
-html, body {
-  height: 100%;
-  overflow-x: hidden;
-}
-
 input {
   width: 11em;
   box-sizing: border-box;
 }
-.btn-click-gate{
+.btn-click-gate {
   margin-top: 1rem;
-  border-radius: .5rem;
-  padding: .5rem 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
 }
-.bg-white{
-  width: 100vw;
-  height: 100vh;
+.bg-white {
+  width: 100%;
+  height: 100%;
   position: absolute;
-  z-index: -1;
+  z-index: 999999;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
 }
-.hidden-gate{
+.hidden-gate {
   display: none;
 }
-input[type=text]{
+input[type="text"] {
   font-size: 1.2rem;
-  font-family: 'Kanit', sans-serif;
-
+  font-family: "Kanit", sans-serif;
 }
 /* input[type=text]::placeholder{
   font-size: 1.2rem;

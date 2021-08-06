@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <html>
-	<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Telling the GATE !</title>
-		<link rel="stylesheet" href="css/style.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
-	</head>
-	<body>
-		<div class="bg-white"></div>
-		<main id=app>
 
-			<h1>IT Tournament Gate Game</h1>
-			
-			<section class="cards flex justify-center">
-				<div class="c1">
-					<div class="card pika animated"></div>
-				</div>
-				<div class="c2">
-					<div class="card eevee animated"></div>
-				</div>
-				<div class="c3">
-					<div class="card charizard animated"></div>
-				</div>
-				<div class="c4">
-					<div class="card mewtwo animated"></div>
-				</div>
-			</section>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Telling the GATE !</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+</head>
 
-			<style class="hover"></style>
+<body style="background: rgb(61, 61, 61);">
+	<div class="bg-white"></div>
+	<main id=app>
 
-			<!-- <section class="demo">
+		<h1>IT Tournament Gate Game</h1>
+
+		<section class="cards flex justify-center ">
+			<div class="c1">
+				<div class="card pika animated"></div>
+			</div>
+			<div class="c2">
+				<div class="card eevee animated"></div>
+			</div>
+			<div class="c3">
+				<div class="card charizard animated"></div>
+			</div>
+			<div class="c4">
+				<div class="card mewtwo animated"></div>
+			</div>
+		</section>
+
+		<style class="hover"></style>
+
+		<!-- <section class="demo">
 				<div class="card"></div>
 				<span class="operator">+</span>
 				<div class="card"><span>color-dodge</span></div>
@@ -41,42 +43,75 @@
 				<div class="card"><span>color-dodge</span></div>
 			</section> -->
 
-		</main>
-		<br />
-		<br />
-		<br />
-		<div class="container-input">
-			<form class="flex flex-col justify-center items-center">
-				<input type="text" id="studentId" placeholder="รหัสนักศึกษา" autocomplete="off"/>
-				<button type="button" class="btn-click-gate" onclick="getGate()">Let me tell you !</button>
-			</form>
-        <h1 id="gateName"></h1>
-		</div>
-		<script src="js/main.js"></script>
-		<script src="js/card.js"></script>
-		<script>
-			var width = window.innerWidth;
-			var card = gsap.timeline({paused:true})
-			// tl.to(".card", 2,{display:"flex"})
-			$(".btn-click-gate").click(function(){
-				gsap.to(".container-input",2,{opacity:0});
-				gsap.to(".container-input",.1,{visibility: "hidden", delay:2});
-				gsap.to(".c1", 2, {x:width*1.5/4});
-				gsap.to(".c2", 2, {x:width*.5/4});
-				gsap.to(".c3", 2, {x:-(width*.5/4)});
-				gsap.to(".c4", 2, {x:-(width*1.5/4)});
-				gsap.to(".bg-white",.1, {zIndex:10});
-				gsap.to(".bg-white", 2,{backgroundColor:"white", ease:"power1.inOut"});
-				gsap.to(".bg-white", 2,{opacity:0,delay:3});
-				gsap.to(".bg-white", 2,{display:"none",delay:3.5});
-				setTimeout(() => {
-					$(".card").addClass("hidden-gate");
-				}, 3000);
-				gsap.set(".c1, .c2, c3, c4", {width:width/2, delay:3.1});
-			})
-			function receive(){
-				
-			}
-		</script>
+	</main>
+	<br />
+	<br />
+	<br />
+	<div class="container-input">
+		<form class="flex flex-col justify-center items-center">
+			<input type="text" id="studentId" placeholder="รหัสนักศึกษา" autocomplete="off" />
+			<button type="button" class="btn-click-gate" onclick="getGate()">Let me tell you !</button>
+		</form>
+		<h1 id="gateName"></h1>
+	</div>
+	<script src="js/main.js"></script>
+	<script src="js/card.js"></script>
+	<script>
+		// var width = window.innerWidth;
+		// var card = gsap.timeline({paused:true})
+		// // tl.to(".card", 2,{display:"flex"})
+		// $(".btn-click-gate").click(function(){
+		// 	gsap.to(".container-input",2,{opacity:0});
+		// 	gsap.to(".container-input",.1,{visibility: "hidden", delay:2});
+		// 	gsap.to(".c1", 2, {x:width*1.5/4});
+		// 	gsap.to(".c2", 2, {x:width*.5/4});
+		// 	gsap.to(".c3", 2, {x:-(width*.5/4)});
+		// 	gsap.to(".c4", 2, {x:-(width*1.5/4)});
+		// 	gsap.to(".bg-white",.1, {zIndex:10});
+		// 	gsap.to(".bg-white", 2,{backgroundColor:"white", ease:"power1.inOut"});
+		// 	gsap.to(".bg-white", 2,{opacity:0,delay:3});
+		// 	gsap.to(".bg-white", 2,{display:"none",delay:3.5});
+		// 	setTimeout(() => {
+		// 		$(".card").addClass("hidden-gate");
+		// 	}, 3000);
+		// 	gsap.set(".c1, .c2, c3, c4", {width:width/2, delay:3.1});
+		// })
+		// function receive(){
+
+		// }
+		$(".btn-click-gate").on('click', () => {
+			var c1 = $(".pika").offset();
+			var c2 = $(".eevee").offset();
+			var c3 = $(".charizard").offset();
+			var c4 = $(".mewtwo").offset();
+			$('form').hide()
+			$(".cards").css({'display':'block','posiotion':'relative'});
+			$('.card').css('position','absolute');
+			$(".pika").css('left', c1.left);
+			$(".eevee").css('left', c2.left);
+			$(".charizard").css('left', c3.left);
+			$(".mewtwo").css('left', c4.left);
+			$(".pika").animate({
+				left: $('.pika').parent().width() / 2 - $(".pika").width() / 2
+			}, "slow");
+			$(".eevee").animate({
+				left: $('.eevee').parent().width() / 2 - $(".eevee").width() / 2
+			}, "slow");
+			$(".charizard").animate({
+				left: $('.charizard').parent().width() / 2 - $(".charizard").width() / 2
+			}, "slow");
+			$(".mewtwo").animate({
+				left: $('.mewtwo').parent().width() / 2 - $(".mewtwo").width() / 2
+			}, "slow");
+			$('.bg-white').css('visibility', 'visible');
+			$('.bg-white').animate({
+				opacity: 1
+			}, 2000)
+			$('.bg-white').animate({
+				opacity: 0
+			}, 1000)
+		})
+	</script>
 	</b getshowody>
+
 </html>
