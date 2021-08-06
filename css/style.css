@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --color1: rgb(0, 231, 255);
   --color2: rgb(255, 0, 231);
@@ -5,18 +6,18 @@
   --charizard1: #fac;
   --charizard2: #ddccaa;
   /* --charizardfront: url(https://assets.codepen.io/13471/charizard-gx.webp); */
-  --charizardfront: url(https://media.discordapp.net/attachments/804374108946300968/872974126799814666/unknown.png?width=836&height=1138);
+  --charizardfront: url(https://media.discordapp.net/attachments/800310656947322940/873128714462982144/nor_gate.png?width=320&height=445);
   --pika1: #54a29e;
   --pika2: #a79d66;
-  --pikafront: url(https://media.discordapp.net/attachments/804374108946300968/872972497203634226/unknown.png?width=818&height=1137);
+  --pikafront: url(https://cdn.discordapp.com/attachments/800310656947322940/873128692224770048/and_and.png);
   /* --pikafront: url(https://assets.codepen.io/13471/pikachu-gx.webp); */
   --eevee1: #efb2fb;
   --eevee2: #acc6f8;
-  --eeveefront: url(https://media.discordapp.net/attachments/804374108946300968/872973205818736680/unknown.png?width=818&height=1138);
+  --eeveefront: url(https://cdn.discordapp.com/attachments/800310656947322940/873128638822895626/or_gate.png);
   /* --eeveefront: url(https://assets.codepen.io/13471/eevee-gx.webp); */
   --mewtwo1: #efb2fb;
   --mewtwo2: #acc6f8;
-  --mewtwofront: url(https://media.discordapp.net/attachments/804374108946300968/872972459018711040/unknown.png?width=820&height=1139);
+  --mewtwofront: url(https://cdn.discordapp.com/attachments/800310656947322940/873128659777646623/not_gate.png);
   /* --mewtwofront: url(https://assets.codepen.io/13471/mewtwo-gx.webp); */
 }
 
@@ -375,6 +376,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
 }
 html, body {
   height: 100%;
@@ -453,11 +455,13 @@ p {
 }
 span,
 input {
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   font-size: 1.75em;
   padding: 0.25em 0.5em 0.3125em;
   color: rgba(255, 255, 255, 0.5);
-  border-radius: 0.25em;
+  /* border-radius: 0.25em; */
   background: transparent;
   transition: all 0.1s;
 }
@@ -535,3 +539,20 @@ input {
   border-radius: .5rem;
   padding: .5rem 1rem;
 }
+.bg-white{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+}
+.hidden-gate{
+  display: none;
+}
+input[type=text]{
+  font-size: 1.2rem;
+  font-family: 'Kanit', sans-serif;
+
+}
+/* input[type=text]::placeholder{
+  font-size: 1.2rem;
+} */

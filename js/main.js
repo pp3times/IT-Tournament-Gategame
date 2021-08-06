@@ -1660,12 +1660,29 @@ function getGate() {
 			console.log("Gate of " + studentId + " is " + objStudents[i].gate)
 			// stop the function if this is found to be true
             // alert(objStudents[i].gate)
-            document.getElementById("gateName").innerHTML = objStudents[i].gate;
+            if (objStudents[i].gate == "AND"){
+              setTimeout(() => {
+                $(".pika").removeClass("hidden-gate");
+              }, 3100);
+            }
+            if (objStudents[i].gate == "OR"){
+              setTimeout(() => {
+                $(".eevee").removeClass("hidden-gate");
+              }, 3100);
+            }
+            if (objStudents[i].gate == "NOR"){
+              setTimeout(() => {
+                $(".charizard").removeClass("hidden-gate");
+              }, 3100);
+            }
+            if (objStudents[i].gate == "NOT"){
+              setTimeout(() => {
+                $(".mewtwo").removeClass("hidden-gate");
+              }, 3100);
+            }
 			return
 		}
 	}
-	console.log("incorrect studentId")
-  // console.log($('#studentId').val())
 }
 
 console.clear();
