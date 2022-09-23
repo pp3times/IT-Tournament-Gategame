@@ -1,1 +1,1 @@
-# IT-Tournament-Gategame
+# IT-Tournament-Gategame for ITGG
